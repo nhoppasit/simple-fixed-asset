@@ -25,6 +25,12 @@
           <AssociatedConnUserName />
           <FullPath>DB_FIXED_ASSET_V1_0.sql</FullPath>
         </FileNode>
+        <FileNode Name="DB_FIXED_ASSET_V1_1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NHOPPASIT-PC2\SQLSERVER_2014:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NHOPPASIT-PC2\SQLSERVER_2014</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DB_FIXED_ASSET_V1_1.sql</FullPath>
+        </FileNode>
         <FileNode Name="run Sp_Asset_Save.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NHOPPASIT-PC2\SQLSERVER_2014:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NHOPPASIT-PC2\SQLSERVER_2014</AssociatedConnSrvName>
