@@ -38,9 +38,7 @@ namespace Asset
         List<ColumnBasic> TestList(string arg1, string arg2);
 
         #endregion
-
-        #region Common Preparing ---------------------------------------------------------
-
+                
         [OperationContract]
         [WebGet(UriTemplate = "SearchByTid?tid={tid}", 
             RequestFormat = WebMessageFormat.Json,
@@ -48,15 +46,21 @@ namespace Asset
             BodyStyle = WebMessageBodyStyle.Wrapped)]
         ResultModelType SearchByTid(string tid);
 
-        //[OperationContract(IsOneWay = false)]
-        //[WebInvoke(Method = "GET", 
-        //    UriTemplate = "CommonPreparing_Save?plantation={Pid}&detail={Detail}&date={ActivityDate}&area={WorkArea}&rate={AmountRate}&advance={AdvanceAmount}&total={TotalAmount}&user={UserId}",
-        //    RequestFormat = WebMessageFormat.Xml,
-        //    ResponseFormat = WebMessageFormat.Xml,
-        //    BodyStyle = WebMessageBodyStyle.Wrapped)]
-        //ResultModelType CommonPreparing_Save(int Pid, string Detail, DateTime ActivityDate, decimal WorkArea, decimal AmountRate, decimal AdvanceAmount, decimal TotalAmount, int UserId);
+        [OperationContract]
+        [WebGet(UriTemplate = "SearchByFid?fid={fid}",
+           RequestFormat = WebMessageFormat.Json,
+           ResponseFormat = WebMessageFormat.Json,
+           BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ResultModelType SearchByFid(string fid);
 
-        #endregion
+        [OperationContract(IsOneWay = false)]
+        [WebInvoke(Method = "GET",
+            UriTemplate = "Save?roomcode={roomcode}&epc={epc}&tid={tid}&fid={fid}&assetlabel={assetlabel}&assettype={assettype}&assetdescription={assetdescription}&systemId={systemId}",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ResultModelType Save(string RoomCode, string Epc, string Tid, string Fid, string AssetLabel, string AssetType, string AssetDescription, string SystemId);
+        
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
@@ -102,6 +106,22 @@ namespace Asset
         public string[] DataTexts { get; set; }
         [DataMember]
         public object[] DataObjects { get; set; }
+        [DataMember]
+        public string EPC { get; set; }
+        [DataMember]
+        public string TID { get; set; }
+        [DataMember]
+        public string FID { get; set; }
+        [DataMember]
+        public string ASSET_LABEL { get; set; }
+        [DataMember]
+        public string ASSET_DESCRIPTION { get; set; }
+        [DataMember]
+        public string ASSET_TYPE { get; set; }
+        [DataMember]
+        public string ROOM_CODE { get; set; }
+        [DataMember]
+        public string ROOM_DESCRIPTION { get; set; }
     }
 
     public class BasicLineColumn
@@ -127,4 +147,5 @@ namespace Asset
         [DataMember]
         public string name { get; set; }
     }
+        
 }

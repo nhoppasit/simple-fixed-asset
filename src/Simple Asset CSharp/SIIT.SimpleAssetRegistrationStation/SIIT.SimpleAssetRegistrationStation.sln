@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIIT.SimpleAssetRegistrationStation", "SIIT.SimpleAssetRegistrationStation\SIIT.SimpleAssetRegistrationStation.csproj", "{A9A337DB-1F9B-4F1B-BF6B-2F5431492A5B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CBC3AD17-84F7-4B52-B1A1-042B467DFDB3} = {CBC3AD17-84F7-4B52-B1A1-042B467DFDB3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB Security", "DB Security\DB Security.csproj", "{D6A2E437-8A79-4C94-8681-1EB92D070A61}"
 EndProject

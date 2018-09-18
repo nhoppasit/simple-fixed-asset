@@ -23,6 +23,23 @@ namespace SIIT.SimpleAssetRegistrationStation
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            Test1();
+        }
+
+        void Test1()
+        {
+            using (ServiceReference1.AssetServiceClient client = new ServiceReference1.AssetServiceClient())
+            {
+                //http://localhost:59934/webapi.svc/save?roomcode=&epc=&tid=123456&fid=&assetlabel=&assettype=&assetdescription=&systemId=
+                ServiceReference1.ResultModelType r = client.SearchByTid("abc");
+                List<ServiceReference1.ColumnBasic> r2 = client.TestList("1", "2");
+            }
         }
     }
 }

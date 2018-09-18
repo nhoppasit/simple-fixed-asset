@@ -6,7 +6,7 @@ DECLARE	@return_value int,
 		@MessageResult nvarchar(200)
 
 EXEC	@return_value = [dbo].[Sp_Asset_SearchByFid]
-		@FID = '123',
+		@FID = 'abc',
 		@RowCount = @RowCount OUTPUT,
 		@MessageResult = @MessageResult OUTPUT
 

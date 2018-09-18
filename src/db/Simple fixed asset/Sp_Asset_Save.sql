@@ -34,7 +34,7 @@ BEGIN
 	IF @SystemId<=0
 	begin
 		set @RowCount = 0;
-		set @MessageResult = 'Invalid TID! TID must more than 0.';
+		set @MessageResult = 'Invalid system id! system id must more than 0.';
 		return -2;
 	end	
 	-- TID

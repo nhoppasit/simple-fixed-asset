@@ -65,8 +65,6 @@ namespace Asset
 
         #endregion
 
-        #region COMMON PREPARING -------------------------------------------------------------
-
         public ResultModelType SearchByTid(string tid)
         {
             try
@@ -74,22 +72,85 @@ namespace Asset
                 using (GenericManagement db = new GenericManagement())
                 {
                     ResultModelType result = new ResultModelType();
-                    int rowCount = 0;
-                    string message = "hello";
+                    //alter PROCEDURE Sp_Asset_SearchByTid
+                    //    @TID int,
+                    //    @RowCount int output,
+                    //    @MessageResult nvarchar(200) OUTPUT
                     Dictionary<string, ParameterStructure> Inputs = new Dictionary<string, ParameterStructure>()
                     {
-                        //{ },
-                        //{ }
+                        { "@TID", new ParameterStructure("@TID", System.Data.SqlDbType.NVarChar, tid) }
                     };
                     Dictionary<string, ParameterStructure> Output = new Dictionary<string, ParameterStructure>()
                     {
-                        //{ }
-                        //{ }
+                        { "@RowCount", new ParameterStructure("@RowCount", System.Data.SqlDbType.Int)},
+                        { "@MessageResult", new ParameterStructure("@MessageResult", System.Data.SqlDbType.NVarChar, null, 200) }
                     };
-                    result.DataSetResult = db.ExecuteToDataSet("", Inputs, out int returnValue, ref Output);
+                    result.DataSetResult = db.ExecuteToDataSet("Sp_Asset_SearchByTid", Inputs, out int returnValue, ref Output);
+                    if (result.DataSetResult != null)
+                        if (result.DataSetResult.Tables.Count > 0)
+                            if (result.DataSetResult.Tables[0].Rows.Count > 0)
+                            {
+                                result.EPC = result.DataSetResult.Tables[0].Rows[0]["EPC"].ToString();
+                                result.TID = result.DataSetResult.Tables[0].Rows[0]["TID"].ToString();
+                                result.FID = result.DataSetResult.Tables[0].Rows[0]["FID"].ToString();
+                                result.ASSET_LABEL = result.DataSetResult.Tables[0].Rows[0]["ASSET_LABEL"].ToString();
+                                result.ASSET_DESCRIPTION = result.DataSetResult.Tables[0].Rows[0]["ASSET_DESCRIPTION"].ToString();
+                                result.ASSET_TYPE = result.DataSetResult.Tables[0].Rows[0]["ASSET_TYPE"].ToString();
+                                result.ROOM_CODE = result.DataSetResult.Tables[0].Rows[0]["ROOM_CODE"].ToString();
+                                result.ROOM_DESCRIPTION = result.DataSetResult.Tables[0].Rows[0]["ROOM_DESCRIPTION"].ToString();
+                            }
+                    int rowCount = Convert.ToInt32(Output["@RowCount"].dbValue);
                     result.Code = returnValue;
                     result.RowCount = rowCount;
-                    result.Message = message;
+                    result.Message = Output["@MessageResult"].dbValue.ToString();
+                    result.Flag = returnValue == 0 && rowCount > 0 ? true : false;                    
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ResultModelType() { Code = -2, Message = ex.Message, };
+            }
+        }
+
+        public ResultModelType SearchByFid(string fid)
+        {
+            try
+            {
+                using (GenericManagement db = new GenericManagement())
+                {
+                    ResultModelType result = new ResultModelType();
+                    //alter PROCEDURE Sp_Asset_SearchByFid
+                    //    @FID nvarchar(50),
+                    //    @RowCount int output,
+                    //    @MessageResult nvarchar(200) OUTPUT
+                    Dictionary<string, ParameterStructure> Inputs = new Dictionary<string, ParameterStructure>()
+                    {
+                        { "@FID", new ParameterStructure("@FID", System.Data.SqlDbType.NVarChar, fid) }
+                    };
+                    Dictionary<string, ParameterStructure> Output = new Dictionary<string, ParameterStructure>()
+                    {
+                        { "@RowCount", new ParameterStructure("@RowCount", System.Data.SqlDbType.Int)},
+                        { "@MessageResult", new ParameterStructure("@MessageResult", System.Data.SqlDbType.NVarChar, null, 200) }
+                    };
+                    result.DataSetResult = db.ExecuteToDataSet("Sp_Asset_SearchByFid", Inputs, out int returnValue, ref Output);
+                    if (result.DataSetResult != null)
+                        if (result.DataSetResult.Tables.Count > 0)
+                            if (result.DataSetResult.Tables[0].Rows.Count > 0)
+                            {
+                                result.EPC = result.DataSetResult.Tables[0].Rows[0]["EPC"].ToString();
+                                result.TID = result.DataSetResult.Tables[0].Rows[0]["TID"].ToString();
+                                result.FID = result.DataSetResult.Tables[0].Rows[0]["FID"].ToString();
+                                result.ASSET_LABEL = result.DataSetResult.Tables[0].Rows[0]["ASSET_LABEL"].ToString();
+                                result.ASSET_DESCRIPTION = result.DataSetResult.Tables[0].Rows[0]["ASSET_DESCRIPTION"].ToString();
+                                result.ASSET_TYPE = result.DataSetResult.Tables[0].Rows[0]["ASSET_TYPE"].ToString();
+                                result.ROOM_CODE = result.DataSetResult.Tables[0].Rows[0]["ROOM_CODE"].ToString();
+                                result.ROOM_DESCRIPTION = result.DataSetResult.Tables[0].Rows[0]["ROOM_DESCRIPTION"].ToString();
+                            }
+                    int rowCount = Convert.ToInt32(Output["@RowCount"].dbValue);
+                    result.Code = returnValue;
+                    result.RowCount = rowCount;
+                    result.Message = Output["@MessageResult"].dbValue.ToString();
                     result.Flag = returnValue == 0 && rowCount > 0 ? true : false;
                     return result;
                 }
@@ -100,7 +161,55 @@ namespace Asset
             }
         }
 
-        #endregion
-
+        public ResultModelType Save(string RoomCode, string Epc, string Tid, string Fid, string AssetLabel, string AssetType, string AssetDescription, string SystemId)
+        {
+            try
+            {
+                using (GenericManagement db = new GenericManagement())
+                {
+                    ResultModelType result = new ResultModelType();
+                    //alter PROCEDURE[dbo].[Sp_Asset_Save] -- !!! สำคัญ ต้องเปลี่ยน Activity type
+                    //@RoomCode nvarchar(50),	
+                    //@Epc nvarchar(50),	
+                    //@Tid nvarchar(50),	
+                    //@Fid nvarchar(50),	
+                    //@AssetLabel nvarchar(200),	
+                    //@AssetType nvarchar(200),	
+                    //@AssetDescription nvarchar(1000),	
+                    //@SystemId int,
+                    //@RowCount int output,
+                    //@MessageResult nvarchar(100) output
+                    int systemId;
+                    try { systemId = Convert.ToInt32(SystemId); } catch { systemId = 0; }
+                    Dictionary<string, ParameterStructure> Inputs = new Dictionary<string, ParameterStructure>()
+                    {
+                        { "@RoomCode", new ParameterStructure("@RoomCode", System.Data.SqlDbType.NVarChar, RoomCode) },
+                        { "@Epc", new ParameterStructure("@Epc", System.Data.SqlDbType.NVarChar, Epc) },
+                        { "@Tid", new ParameterStructure("@Tid", System.Data.SqlDbType.NVarChar, Tid) },
+                        { "@Fid", new ParameterStructure("@Fid", System.Data.SqlDbType.NVarChar, Fid) },
+                        { "@AssetLabel", new ParameterStructure("@AssetLabel", System.Data.SqlDbType.NVarChar, AssetLabel) },
+                        { "@AssetType", new ParameterStructure("@AssetType", System.Data.SqlDbType.NVarChar, AssetType) },
+                        { "@AssetDescription", new ParameterStructure("@AssetDescription", System.Data.SqlDbType.NVarChar, AssetDescription) },
+                        { "@SystemId", new ParameterStructure("@SystemId", System.Data.SqlDbType.Int, systemId) }
+                    };
+                    Dictionary<string, ParameterStructure> Output = new Dictionary<string, ParameterStructure>()
+                    {
+                        { "@RowCount", new ParameterStructure("@RowCount", System.Data.SqlDbType.Int)},
+                        { "@MessageResult", new ParameterStructure("@MessageResult", System.Data.SqlDbType.NVarChar, null, 200) }
+                    };
+                    db.ExecuteNonQuery("Sp_Asset_Save", Inputs, out int returnValue, ref Output);
+                    int rowCount = Convert.ToInt32(Output["@RowCount"].dbValue);
+                    result.Code = returnValue;
+                    result.RowCount = rowCount;
+                    result.Message = Output["@MessageResult"].dbValue.ToString();
+                    result.Flag = returnValue == 0 && rowCount > 0 ? true : false;
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ResultModelType() { Code = -2, Message = ex.Message, };
+            }
+        }
     }
 }

@@ -20,7 +20,7 @@ GO
 -- =============================================
 alter PROCEDURE Sp_Asset_SearchByFid
 	-- Add the parameters for the stored procedure here
-	@FID int,
+	@FID nvarchar(50),
 	@RowCount int output,
 	@MessageResult nvarchar(200) OUTPUT
 AS
@@ -28,16 +28,21 @@ BEGIN
 	-- ===================================================================================
 	-- STATE-1: VALIDATION
 	-- ===================================================================================	
-	/*-------------------------------------------------
-	 * เช็ค NULL
-	 *-------------------------------------------------*/
-	-- User id
+	-- fid
 	IF @FID is NULL
 	begin
 		print 'Invalid TID! TID cannot be null.';
 		-- THROW 50031, 'Invalid TID! TID can not be NULL.', 1;  
 		set @RowCount=0;
 		set @MessageResult = 'Invalid TID! TID cannot be null.';
+		return -2;
+	end
+	IF @FID = ''
+	begin
+		print 'Invalid TID! TID cannot be empty.';
+		-- THROW 50031, 'Invalid TID! TID can not be NULL.', 1;  
+		set @RowCount=0;
+		set @MessageResult = 'Invalid TID! TID cannot be empty.';
 		return -2;
 	end
 

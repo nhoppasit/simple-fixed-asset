@@ -1,3 +1,4 @@
+use DB_FIXED_ASSET
 -- ================================================
 -- Template generated from Template Explorer using:
 -- Create Procedure (New Menu).SQL
@@ -20,7 +21,7 @@ GO
 -- =============================================
 alter PROCEDURE Sp_Asset_SearchByTid
 	-- Add the parameters for the stored procedure here
-	@TID int,
+	@TID nvarchar(50),
 	@RowCount int output,
 	@MessageResult nvarchar(200) OUTPUT
 AS
@@ -28,16 +29,22 @@ BEGIN
 	-- ===================================================================================
 	-- STATE-1: VALIDATION
 	-- ===================================================================================	
-	/*-------------------------------------------------
-	 * เช็ค NULL
-	 *-------------------------------------------------*/
-	-- User id
+	-- tid
 	IF @TID is NULL
 	begin
 		print 'Invalid TID! TID cannot be null.';
 		-- THROW 50031, 'Invalid TID! TID can not be NULL.', 1;  
 		set @RowCount=0;
 		set @MessageResult = 'Invalid TID! TID cannot be null.';
+		return -2;
+	end
+	-- empty
+	IF @TID = ''
+	begin
+		print 'Invalid TID! TID cannot be empty.';
+		-- THROW 50031, 'Invalid TID! TID can not be NULL.', 1;  
+		set @RowCount=0;
+		set @MessageResult = 'Invalid TID! TID cannot be empty.';
 		return -2;
 	end
 

@@ -6,7 +6,7 @@ DECLARE	@return_value int,
 		@MessageResult nvarchar(200)
 
 EXEC	@return_value = [dbo].[Sp_Asset_SearchByTid]
-		@TID = '123',
+		@TID = '456',
 		@RowCount = @RowCount OUTPUT,
 		@MessageResult = @MessageResult OUTPUT
 
@@ -14,5 +14,7 @@ SELECT	@RowCount as N'@RowCount',
 		@MessageResult as N'@MessageResult'
 
 SELECT	'Return Value' = @return_value
+
+select * from TB_ASSET
 
 GO
