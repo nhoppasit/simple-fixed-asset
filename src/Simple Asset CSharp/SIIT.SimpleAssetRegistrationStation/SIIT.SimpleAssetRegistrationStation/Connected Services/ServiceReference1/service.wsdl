@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AssetService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Asset" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAssetService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_MorningCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:MorningCheck" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_MorningCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MorningCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_TestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestList" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_TestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_SearchByTid_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByTid" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_SearchByTid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByTidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_SearchByFid_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByFid" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_SearchByFid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByFidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="IAssetService_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAssetService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/GetData" message="tns:IAssetService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/GetDataResponse" message="tns:IAssetService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/GetDataUsingDataContract" message="tns:IAssetService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/GetDataUsingDataContractResponse" message="tns:IAssetService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MorningCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/MorningCheck" message="tns:IAssetService_MorningCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/MorningCheckResponse" message="tns:IAssetService_MorningCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/TestList" message="tns:IAssetService_TestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/TestListResponse" message="tns:IAssetService_TestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByTid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/SearchByTid" message="tns:IAssetService_SearchByTid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/SearchByTidResponse" message="tns:IAssetService_SearchByTid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByFid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/SearchByFid" message="tns:IAssetService_SearchByFid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/SearchByFidResponse" message="tns:IAssetService_SearchByFid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAssetService/Save" message="tns:IAssetService_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAssetService/SaveResponse" message="tns:IAssetService_Save_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpEndPoint" type="tns:IAssetService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MorningCheck">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/MorningCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestList">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/TestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByTid">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/SearchByTid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByFid">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/SearchByFid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://tempuri.org/IAssetService/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AssetService">
+    <wsdl:port name="BasicHttpEndPoint" binding="tns:BasicHttpEndPoint">
+      <soap:address location="http://localhost:59934/webapi.svc/AssetService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

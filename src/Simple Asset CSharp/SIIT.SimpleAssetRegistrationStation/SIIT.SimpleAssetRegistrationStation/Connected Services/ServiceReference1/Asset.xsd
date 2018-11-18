@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Asset" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Asset" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="ArrayOfColumnBasic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColumnBasic" nillable="true" type="tns:ColumnBasic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumnBasic" nillable="true" type="tns:ArrayOfColumnBasic" />
+  <xs:complexType name="ColumnBasic">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BasicLineColumn">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="categories" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q2:ArrayOfdecimal" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ColumnBasic" nillable="true" type="tns:ColumnBasic" />
+  <xs:complexType name="BasicLineColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChartSubtitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChartTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChartType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XAxisTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YAxisTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicLineColumn" nillable="true" type="tns:BasicLineColumn" />
+  <xs:complexType name="ResultModelType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DataObjects" nillable="true" type="q3:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="DataSetResult" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DataTexts" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Flag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultModelType" nillable="true" type="tns:ResultModelType" />
+</xs:schema>
