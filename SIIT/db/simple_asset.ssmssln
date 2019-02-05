@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "create db", "create db\create db.ssmssqlproj", "{F259AF44-2EFB-47F9-A1D3-9EDC6F15E001}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Asset", "..\..\..\Work 2018\Wow_repo\school-2018\db\Asset\Asset.ssmssqlproj", "{3E0D7F6E-177F-413D-99D1-222F7EDA366C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A76B64C9-ECFD-48FA-B2D4-55A538AF38D1}.Default|Default.ActiveCfg = Default
+		{F259AF44-2EFB-47F9-A1D3-9EDC6F15E001}.Default|Default.ActiveCfg = Default
+		{3E0D7F6E-177F-413D-99D1-222F7EDA366C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

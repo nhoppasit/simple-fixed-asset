@@ -1,0 +1,4 @@
+#Thu Jul 05 15:04:01 CST 2018
+base.0=E\:\\AndroidStudioSimple\\demo-uhf_example2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=E\:\\AndroidStudioSimple\\demo-uhf_example2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

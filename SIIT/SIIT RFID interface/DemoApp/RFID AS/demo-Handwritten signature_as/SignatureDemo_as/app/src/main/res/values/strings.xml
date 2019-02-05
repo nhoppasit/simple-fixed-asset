@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SignatureDemo</string>
+    <string name="title_name">Singature</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="btn_clear">Clear</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_scan">Scan</string>
+    
+    <string name="text_design_signature">Design signature</string>
+    <string name="text_signature">Signature_</string>
+    <string name="msg_save_succ">Saved successfully</string>
+
+</resources>

@@ -1,0 +1,1504 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ReaderDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ReaderDemo.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于Reader1000SDK "
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Reader1000SDK    V 1.0",IDC_STATIC,40,10,125,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_READERDEMO_DIALOG DIALOGEX 0, 0, 662, 533
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Reader626SDK   V5.1"
+FONT 9, "宋体"
+BEGIN
+END
+
+IDD_PARAMETER_DIALOG DIALOG DISCARDABLE  0, 0, 484, 391
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ReaderParameter"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "Basic Parameter",IDC_STATIC,7,38,463,140
+    LTEXT           "BaudRate of RS232/RS485 Port:",IDC_STATIC,14,55,117,8
+    COMBOBOX        IDC_COMBO1,140,51,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "RF Power Output(0-160):",IDC_STATIC,14,102,93,8
+    LTEXT           "Min.Frequency of Carrier(MHz):",IDC_STATIC,14,70,121,8
+    LTEXT           "Max.Frequency of Carrier(MHz):",IDC_STATIC,14,85,121,8
+    GROUPBOX        "Parameters for Continuing and Trigger Mode",IDC_STATIC,
+                    7,180,463,145
+    GROUPBOX        "Read from which Antenna",IDC_STATIC,10,191,141,24
+    GROUPBOX        "Work Mode",IDC_STATIC,7,7,166,30
+    GROUPBOX        "Port and Format for Output",IDC_STATIC,153,191,219,24
+    LTEXT           "Interval of Reading for Direct:",IDC_STATIC,15,295,125,
+                    8
+    GROUPBOX        "Manner of Output ID",IDC_STATIC,14,269,103,23
+    GROUPBOX        "Which type of tag to be read",IDC_STATIC,131,218,127,50
+    GROUPBOX        "Wiegand Port Format",IDC_STATIC,14,218,112,50
+    LTEXT           "Start Address of ID:",IDC_STATIC,378,192,81,8
+    LTEXT           "Modulation Depth(0-160):",IDC_STATIC,15,120,97,8
+    GROUPBOX        "Parameters only for TK900 tag",
+                    IDC_PARAMETER_FOR_EM_STATIC1,6,327,146,50,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    CONTROL         "Continuing",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,20,20,56,10
+    CONTROL         "Trigger",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,79,20,
+                    44,10
+    CONTROL         "Command",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,126,20,
+                    44,10
+    COMBOBOX        IDC_COMBO2,140,67,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,140,83,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,140,99,70,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT2,140,117,70,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "ANT1",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,202,32,10
+    CONTROL         "ANT2",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    54,202,32,10
+    CONTROL         "ANT3",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    86,202,32,10
+    CONTROL         "ANT4",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    117,202,32,10
+    CONTROL         "Wiegand26",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,156,201,52,10
+    CONTROL         "Wiegand34",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,208,
+                    201,52,10
+    CONTROL         "RS485",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,260,201,
+                    36,10
+    CONTROL         "RS232",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,298,201,
+                    36,10
+    CONTROL         "RJ45",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,337,201,
+                    32,10
+    LTEXT           "Pulse Width (*10us):",IDC_STATIC,19,229,50,15
+    LTEXT           "Pulse Interval (*10us):",IDC_STATIC,19,248,56,15
+    EDITTEXT        IDC_EDIT3,84,227,33,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT4,84,248,33,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "ISO18000-6B",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,140,235,60,10
+    CONTROL         "EPCC1G2",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,205,
+                    236,44,10
+    CONTROL         "TK900",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,140,253,
+                    36,10
+    CONTROL         "TK900(H)",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_DISABLED,205,252,48,10
+    COMBOBOX        IDC_COMBO4,143,290,46,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Direct",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,21,279,40,8
+    CONTROL         "Standard",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,65,
+                    279,47,8
+    EDITTEXT        IDC_EDIT5,413,206,42,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Duration of Reading:",IDC_PARAMETER_FOR_EM_STATIC2,13,
+                    344,81,8,NOT WS_VISIBLE | WS_DISABLED
+    COMBOBOX        IDC_COMBO5,99,339,47,70,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Max Tags of once Reading(1～100):",IDC_STATIC,15,156,
+                    136,10
+    EDITTEXT        IDC_EDIT6,158,152,52,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Set Relay",IDC_STATIC,220,325,74,60
+    CONTROL         "Relay1",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,231,336,40,10
+    CONTROL         "Relay2",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,231,350,40,10
+    PUSHBUTTON      "Update Parameter",IDC_BUTTON1,380,15,90,20
+    PUSHBUTTON      "Set Factory Parameter",IDC_BUTTON2,369,356,100,20
+    PUSHBUTTON      "Default Parameter",IDC_BUTTON3,369,329,100,20
+    LTEXT           "Number of Pages:",IDC_PARAMETER_FOR_EM_STATIC3,13,361,
+                    65,8,NOT WS_VISIBLE | WS_DISABLED
+    COMBOBOX        IDC_COMBO6,99,359,47,70,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "HardVersion:",IDC_STATIC,178,12,49,8
+    LTEXT           "SoftVersion:",IDC_STATIC,178,29,49,8
+    EDITTEXT        IDC_EDIT7,228,8,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT8,228,26,40,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Set Relay",IDC_BUTTON4,229,365,55,15
+    CONTROL         "Modulation",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,153,349,56,10
+    CONTROL         "TX_Mode",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,152,329,44,10
+    LTEXT           "Interval of Reading for Standard:",IDC_Standard_STATIC,
+                    16,311,134,10,NOT WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_EDIT9,156,307,32,15,ES_AUTOHSCROLL
+    CONTROL         "Enable Buzzer",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,392,61,66,10
+    GROUPBOX        "What be read from tag",IDC_STATIC,262,218,106,36
+    CONTROL         "ID of the Tag",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,267,229,67,11
+    CONTROL         "SN Selected by User",IDC_RADIO18,"Button",
+                    BS_AUTORADIOBUTTON,267,243,95,9
+    CONTROL         "RS485 NetWork",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,392,49,69,8
+    LTEXT           "Address of Reader(1-254):",IDC_STATIC,15,138,115,9
+    EDITTEXT        IDC_EDIT10,140,135,70,13,ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    284,52,100,15
+    CONTROL         "IPAddress2",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,
+                    284,85,100,15
+    CONTROL         "IPAddress3",IDC_IPADDRESS3,"SysIPAddress32",WS_TABSTOP,
+                    284,102,100,15
+    CONTROL         "IPAddress4",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,
+                    284,136,100,15
+    EDITTEXT        IDC_EDIT11,284,69,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,284,153,40,14,ES_AUTOHSCROLL
+    LTEXT           "Reader IP:",IDC_STATIC_READER_IP,218,55,51,8
+    LTEXT           "Reader IP Port:",IDC_STATIC_READER_PORT,218,72,61,8
+    LTEXT           "Reader Gateway:",IDC_STATIC_READER_GATEWAY,218,106,61,8
+    LTEXT           "Reader IP Mask:",IDC_STATIC_READER_MASK,218,89,61,8
+    LTEXT           "Host IP:",IDC_STATIC_HOST_IP,218,140,33,8
+    LTEXT           "Host IP Port:",IDC_STATIC_HOST_PORT,218,156,53,8
+    CONTROL         "Check User Validity",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,266,257,96,10
+    PUSHBUTTON      "Get Time",IDC_BUTTON5,285,308,48,14
+    PUSHBUTTON      "Set Time",IDC_BUTTON6,206,307,47,14
+    LISTBOX         IDC_LIST2,206,283,129,19,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Infomation",IDC_STATIC,201,269,139,36
+    EDITTEXT        IDC_EDIT13,284,119,99,14,ES_AUTOHSCROLL
+    LTEXT           "Reader MAC:",IDC_STATIC_READER_MAC,218,123,45,8
+END
+
+IDD_EPCC1G2_DIALOG DIALOG DISCARDABLE  0, 0, 572, 430
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EPCC1G2 Test"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "Select Antenna for Test",IDC_STATIC_SelectAntTEst_6C,7,
+                    7,155,23
+    CONTROL         "ANT1",IDC_CHECK1_6C,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,17,32,10
+    CONTROL         "ANT2",IDC_CHECK2_6C,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,51,17,32,10
+    CONTROL         "ANT3",IDC_CHECK3_6C,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,17,32,10
+    CONTROL         "ANT4",IDC_CHECK4_6C,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,17,32,10
+    GROUPBOX        "List EPC of Tags",IDC_STATIC_LstEpcofTags_6C,165,7,400,
+                    115
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,170,17,390,100
+    COMBOBOX        IDC_COMBO1,178,145,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Select Memory Bank",IDC_STATIC_SelMemBank_6C,12,67,145,
+                    23
+    CONTROL         "Password",IDC_RADIO1_PassWord_6C,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,15,77,48,10
+    CONTROL         "EPC",IDC_RADIO2_EPC_6C,"Button",BS_AUTORADIOBUTTON,64,
+                    77,31,10
+    CONTROL         "TID",IDC_RADIO3_TID_6C,"Button",BS_AUTORADIOBUTTON,99,
+                    77,32,10
+    GROUPBOX        "List Selected Tag",IDC_STATIC_listSelectTag_6C,7,58,155,
+                    114
+    LTEXT           "Address of Tag Data(bit):",IDC_STATIC_AddressOfTag_6C,
+                    15,96,103,8
+    LTEXT           "Length of Tag Data(bit):",IDC_STATIC_LengofDatab_6C,15,
+                    111,97,8
+    LTEXT           "Tag Data(HEX):",IDC_STATIC_TagDataHex_6C,15,125,113,8
+    EDITTEXT        IDC_EDIT1,120,91,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,120,106,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,25,136,130,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Protect",IDC_BUTTON1_SetProtectAG_6C,230,360,60,15
+    GROUPBOX        "Read and Write Data Block",IDC_STATIC_RWDataBlock_6C,
+                    165,125,318,108
+    LTEXT           "Address of Tag Data(WORD):",IDC_STATIC_AddofDataC_6C,
+                    171,170,105,8
+    LTEXT           "Length of Tag Data(WORD):",IDC_STATIC_LengofDataD_6C,
+                    171,186,101,8
+    LTEXT           "Written Data(HEX):",IDC_STATIC_WriteDataHex_6C,171,218,
+                    81,8
+    GROUPBOX        "Alarm",IDC_STATIC_AlarmCC_6C,340,304,143,83
+    LTEXT           "Kill Password (8HEX):",IDC_STATIC_KillPass8Hex_6C,13,
+                    209,57,19
+    GROUPBOX        "Lock Block for User",IDC_STATIC_LockBForUser_6C,340,235,
+                    143,67
+    LTEXT           "Address of Tag Data(WORD):",IDC_STATIC_AddOFTAGBB_6C,
+                    343,269,61,17
+    LTEXT           "Access Password (8HEX):",IDC_STATIC_ACCESSPSDAA_6C,343,
+                    285,60,18
+    GROUPBOX        "Set protect for reading or writing",
+                    IDC_STATIC_SetProtectB_6C,7,235,331,151
+    EDITTEXT        IDC_EDIT4,280,165,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,280,181,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,254,213,131,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Kill  Tag",IDC_BUTTON2_KillTag_6C,122,208,31,20,
+                    BS_MULTILINE
+    PUSHBUTTON      "Set Protect",IDC_BUTTON3_SetProtectBB_6C,447,272,34,23,
+                    BS_MULTILINE
+    CONTROL         "List EPC of Tag",IDC_CHECK5_ListEpcofTag_6C,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,85,152,70,15
+    CONTROL         "Read",IDC_CHECK6_ReadD_6C,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,392,213,35,15
+    EDITTEXT        IDC_EDIT7,407,269,38,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,407,285,38,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,74,211,39,14,ES_AUTOHSCROLL
+    GROUPBOX        "Read Interval",IDC_STATIC_RInterval_6C,7,31,155,26
+    COMBOBOX        IDC_COMBO2,50,40,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_LIST2,320,160,157,50,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Write",IDC_BUTTON4_WrtieD_6C,437,213,35,15
+    GROUPBOX        "Select a Tag",IDC_STATIC_SelectAtagB_6C,171,133,144,30
+    GROUPBOX        "Password",IDC_STATIC_PasswordCC_6C,15,286,160,25
+    CONTROL         "Kill Password",IDC_RADIO9_KillPsdAB_6C,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,20,297,65,10
+    CONTROL         "Access Password",IDC_RADIO10_AccessPsdAC_6C,"Button",
+                    BS_AUTORADIOBUTTON,95,297,75,10
+    LTEXT           "Access Password(8HEX):",IDC_STATIC_AccessPassAF_6C,190,
+                    345,89,8
+    EDITTEXT        IDC_EDIT10,290,340,40,14,ES_AUTOHSCROLL
+    LTEXT           "Access Password(8HEX):",IDC_STATIC_AccessPsdB_6C,171,
+                    202,89,8
+    EDITTEXT        IDC_EDIT11,265,197,50,14,ES_AUTOHSCROLL
+    GROUPBOX        "Lock of Password",IDC_STATIC_LockofPsdAA_6C,10,275,170,
+                    105
+    GROUPBOX        "Lock of EPC TID and User Bank",
+                    IDC_STATIC_LockofEPCTIDandUser_6C,184,275,151,62
+    CONTROL         "Writeable from any state",
+                    IDC_RADIO11_WriteFormandState_6C,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,190,286,112,10
+    CONTROL         "Permanently writeable",IDC_RADIO12_PerWriteable_6C,
+                    "Button",BS_AUTORADIOBUTTON,190,299,100,10
+    CONTROL         "Writeable from the secured state",
+                    IDC_RADIO13_WriteformSecState_6C,"Button",
+                    BS_AUTORADIOBUTTON,190,312,144,10
+    CONTROL         "Never writeable",IDC_RADIO14_Neverwriteable_6C,"Button",
+                    BS_AUTORADIOBUTTON,190,325,76,10
+    GROUPBOX        "Select Memory Bank",IDC_STATIC_SelectMemBankB_6C,320,
+                    133,157,23
+    CONTROL         "Password",IDC_RADIO15_PasswordB_6C,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,324,143,48,10
+    CONTROL         "EPC",IDC_RADIO16_EPC_6C,"Button",BS_AUTORADIOBUTTON,372,
+                    143,32,10
+    CONTROL         "TID",IDC_RADIO17_TID_6C,"Button",BS_AUTORADIOBUTTON,405,
+                    143,33,10
+    CONTROL         "User",IDC_RADIO18_User_6C,"Button",BS_AUTORADIOBUTTON,
+                    439,143,36,10
+    GROUPBOX        "Select Memory Bank",IDC_STATIC_SelMemBankD_6C,10,248,
+                    170,25
+    CONTROL         "Password",IDC_RADIO19,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,259,48,10
+    CONTROL         "EPC",IDC_RADIO20,"Button",BS_AUTORADIOBUTTON,67,259,32,
+                    10
+    CONTROL         "TID",IDC_RADIO21,"Button",BS_AUTORADIOBUTTON,105,259,31,
+                    10
+    CONTROL         "User",IDC_RADIO22,"Button",BS_AUTORADIOBUTTON,140,259,
+                    35,10
+    GROUPBOX        "Select a Tag",IDC_STATIC_SelATagE_6C,184,248,151,25
+    COMBOBOX        IDC_COMBO3,195,257,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Select a Tag",IDC_STATIC_SelectaTagAE_6C,344,311,135,25
+    COMBOBOX        IDC_COMBO4,20,189,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Select a Tag",IDC_STATIC_SelATagAA_6C,344,243,135,25
+    GROUPBOX        "Kill Tag",IDC_STATIC_KillTag_6C,7,172,155,61
+    COMBOBOX        IDC_COMBO5,347,252,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Select a Tag",IDC_STATIC_SelectaTag_6C,12,180,145,25
+    COMBOBOX        IDC_COMBO6,347,319,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Eas State",IDC_STATIC_EASSTATE_6C,344,337,62,30
+    LTEXT           "Access Password(8HEX):",IDC_STATIC_AccessPSDDA_6C,422,
+                    338,58,17
+    CONTROL         "No Alarm",IDC_RADIO23_NoAlarm_6C,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,345,345,43,10
+    CONTROL         "Alarm",IDC_RADIO24_Alarm_6C,"Button",BS_AUTORADIOBUTTON,
+                    345,355,36,10
+    EDITTEXT        IDC_EDIT12,421,356,50,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Alarm",IDC_BUTTON5_SetAlarm_6C,345,371,50,14
+    CONTROL         "EasAlarm",IDC_CHECK7_EasAlarm_6C,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,422,371,50,14
+    PUSHBUTTON      "Lock Read",IDC_BUTTON6_LockRead_6C,320,395,75,20
+    PUSHBUTTON      "Unlock Read",IDC_BUTTON7_UnlockRaed_6C,405,395,75,20
+    GROUPBOX        "Read Protect",IDC_STATIC_ReadProtect_6C,11,385,474,40
+    GROUPBOX        "Select a Tag",IDC_STATIC_SetATagAH_6C,22,393,148,27
+    COMBOBOX        IDC_COMBO7,34,402,130,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Access Password(8HEX):",IDC_STATIC_AccessPsdBA_6C,180,
+                    400,70,15
+    EDITTEXT        IDC_EDIT13,250,400,55,15,ES_AUTOHSCROLL
+    GROUPBOX        "Calibrate",IDC_STATIC_Calibrate_6C,485,125,80,80
+    EDITTEXT        IDC_EDIT14,510,160,50,15,ES_AUTOHSCROLL
+    LTEXT           "Access PassWord(8HEX):",IDC_STATIC_AccessPsd8Hex_6C,490,
+                    136,65,19
+    CONTROL         "Calibrate",IDC_CHECK9_CalibrateB_6C,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,496,180,55,20
+    CONTROL         "Detect Tag",IDC_CHECK10_DetectTag_6C,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,15,152,60,15
+    ICON            IDI_ICON1,IDC_EASALARM_STATIC,397,368,20,20
+    CONTROL         "Writeable and readable from any state",
+                    IDC_RADIO6_AnyReadWrite_6C,"Button",BS_AUTORADIOBUTTON | 
+                    BS_MULTILINE | WS_GROUP,15,316,155,14
+    CONTROL         "Permanently readable and writeable",
+                    IDC_RADIO6_PermRead_6C,"Button",BS_AUTORADIOBUTTON,15,
+                    332,155,13
+    CONTROL         "Readable and writeable from the secured state",
+                    IDC_RADIO7_ReadandWdriteState_6C,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,15,347,155,14
+    CONTROL         "Never readable and writeable",
+                    IDC_RADIO8_NeverReadAndWrite_6C,"Button",
+                    BS_AUTORADIOBUTTON,15,364,155,14
+END
+
+IDD_TK900_DIALOG DIALOG DISCARDABLE  0, 0, 484, 405
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TK900 Test"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "Select Antenna for Test",IDC_STATIC,7,7,164,30
+    GROUPBOX        "List ID of Tags",IDC_STATIC,175,7,302,130
+    GROUPBOX        "Interval",IDC_STATIC,7,38,164,30
+    GROUPBOX        "Select Tag",IDC_STATIC,7,69,164,30
+    CONTROL         "ANT1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,20,32,10
+    CONTROL         "ANT2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    55,20,32,10
+    CONTROL         "ANT3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    95,20,32,10
+    CONTROL         "ANT4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    135,20,32,10
+    COMBOBOX        IDC_COMBO1,55,49,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,40,80,100,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "List ID of All Tags",IDC_CHECK5,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,80,110,91,20
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,181,20,290,110
+    GROUPBOX        "Read and Write Data Block",IDC_STATIC,7,140,205,105
+    LTEXT           "Location of Tag Page:",IDC_STATIC,15,160,85,8
+    LTEXT           "Length of Tag Page(Only for Read):",IDC_STATIC,15,180,
+                    137,8
+    LTEXT           "Write Data:",IDC_STATIC,15,200,45,8
+    EDITTEXT        IDC_EDIT1,160,155,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,160,175,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,90,195,110,14,ES_AUTOHSCROLL
+    CONTROL         "Read",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,50,220,50,15
+    CONTROL         "Write",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,120,220,50,15
+    GROUPBOX        "State of Protecting",IDC_STATIC,7,253,205,77
+    GROUPBOX        "Information",IDC_STATIC,220,150,257,248
+    LISTBOX         IDC_LIST2,226,162,244,231,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Location of Tag Page:",IDC_STATIC,15,265,85,8
+    EDITTEXT        IDC_EDIT4,160,260,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "SetProtect",IDC_BUTTON1,40,310,60,15
+    PUSHBUTTON      "GetProtect",IDC_BUTTON2,125,310,60,15
+    LTEXT           "Length of Tag Page (Only for SetProtect):",IDC_STATIC,
+                    15,285,120,15
+    EDITTEXT        IDC_EDIT5,160,280,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Setting  TTO",IDC_STATIC,8,334,206,64
+    LTEXT           "Address of Page(1-7):",IDC_STATIC,16,345,95,10
+    EDITTEXT        IDC_EDIT6,155,341,45,15,ES_AUTOHSCROLL
+    LTEXT           "Number of Pages(0-2):",IDC_STATIC,15,358,95,8
+    EDITTEXT        IDC_EDIT7,155,358,45,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_BUTTON3,26,377,60,15
+    CONTROL         "List ID Page",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,9,111,68,18
+    PUSHBUTTON      "GetAddress and Length",IDC_BUTTON4,100,377,89,15
+END
+
+IDD_ISO6B_DIALOG DIALOG DISCARDABLE  0, 0, 484, 339
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ISO6B Test"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "Select Antenna for Test",IDC_STATIC_SetAntForTest_6B,7,
+                    7,164,30
+    GROUPBOX        "List ID of Tags",IDC_STATIC_ListIDofTags_6B,175,7,302,
+                    130
+    GROUPBOX        "Interval",IDC_STATIC_Interval_6B,7,40,164,30
+    GROUPBOX        "Read and Write Data Block",IDC_STATIC_RWDBlock_6B,7,140,
+                    190,130
+    GROUPBOX        "Select Tags by Condition",IDC_STATIC_SelectTagByCon,202,
+                    140,275,110
+    GROUPBOX        "Information",IDC_STATIC_Informationt,202,252,275,80
+    GROUPBOX        "Write Protect",IDC_STATIC_WritePro,7,271,190,61
+    CONTROL         "ANT1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,20,32,10
+    CONTROL         "ANT2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    55,20,32,10
+    CONTROL         "ANT3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    95,20,32,10
+    CONTROL         "ANT4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    135,20,32,10
+    COMBOBOX        IDC_COMBO1,55,51,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,181,20,290,110
+    CONTROL         "LabelPresent",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,15,115,65,15
+    CONTROL         "List Tag ID",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,100,115,65,15
+    LTEXT           "Address of Tag Data(0/8-223):",IDC_STATIC_AofTagAA,15,
+                    155,132,8
+    LTEXT           "Length of Tag Data(1-32/16):",IDC_STATIC_LegTagDataBB,
+                    15,175,134,8
+    LTEXT           "Written Data(Hex):",IDC_STATIC_WrittDataAC,15,195,100,8
+    EDITTEXT        IDC_EDIT1,150,150,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,150,170,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,70,210,120,14,ES_AUTOHSCROLL
+    GROUPBOX        "Select Tag",IDC_STATIC_SelTagB_6B,7,75,164,30
+    COMBOBOX        IDC_COMBO2,40,86,100,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Address of Tag Data(8/0-223):",IDC_STATIC_ADdTagDataBC,
+                    11,290,141,8
+    EDITTEXT        IDC_EDIT4,154,285,38,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Protect",IDC_BUTTON1,30,310,65,15
+    PUSHBUTTON      "Check Protect",IDC_BUTTON2,110,310,65,15
+    LTEXT           "Address of Tag Data(0-223):",IDC_STATIC_AddressOfTagDAD,
+                    230,190,130,8
+    LTEXT           "Condition(<=8 HEX Number):",IDC_STATIC_CondiBA,230,210,
+                    129,8
+    EDITTEXT        IDC_EDIT5,360,185,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,360,205,80,14,ES_AUTOHSCROLL
+    CONTROL         "List ID of Selected Tags",IDC_CHECK7,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,280,225,112,
+                    15
+    CONTROL         "Read",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,115,230,60,15
+    CONTROL         "Write 4 Bytes",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,115,250,60,15
+    LISTBOX         IDC_LIST2,210,265,260,60,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CONTROL         "Equal Condition",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,214,155,76,10
+    CONTROL         "Unequal Condition",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,344,155,84,10
+    CONTROL         "Greater than Condition",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON,214,170,104,10
+    CONTROL         "Less than Condition",IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,344,169,92,10
+    CONTROL         "Write a Byte",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,47,250,60,15
+END
+
+IDD_PROGRESS_DIALOG DIALOG DISCARDABLE  0, 0, 347, 25
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Please waiting..."
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESSReader,"msctls_progress32",
+                    WS_BORDER,7,5,332,13
+END
+
+IDD_PROPPAGE_PARAMETER DIALOG DISCARDABLE  0, 0, 580, 435
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Parameter"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_RS485ADDR,151,115,45,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_BAUDRATE,151,49,67,82,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_WIEGANDWIDTH,108,242,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WIEGANDINTERVALl,108,257,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IDSART,455,200,50,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Auto Model Parameter",IDC_BUTTON_SETAUTO,445,383,
+                    117,15
+    COMBOBOX        IDC_COMBO_MAINFREQ,151,65,67,83,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_MAXFREQ,151,81,67,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_POWER,151,97,45,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NUMOFCARD,151,133,45,14,ES_AUTOHSCROLL
+    CONTROL         "Buzzer",IDC_CHECK_BUZZER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,244,55,72,10
+    CONTROL         "",IDC_IPADDRESS_READERIP,"SysIPAddress32",WS_TABSTOP,
+                    339,79,100,15
+    EDITTEXT        IDC_EDIT_READPORT,339,96,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IPADDRESS_READERMASK,"SysIPAddress32",WS_TABSTOP,
+                    339,113,100,15
+    CONTROL         "",IDC_IPADDRESS_READERGW,"SysIPAddress32",WS_TABSTOP,
+                    339,132,100,15
+    EDITTEXT        IDC_EDITREADERMAC,339,150,113,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Basic Paramter",IDC_BUTTON_SETBASIC,465,5,97,19
+    CONTROL         "ANT1",IDC_CHECK_ANT1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,217,32,10
+    CONTROL         "ANT2",IDC_CHECK_ANT2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,57,217,32,10
+    CONTROL         "ANT3",IDC_CHECK_ANT3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,98,217,32,10
+    CONTROL         "ANT4",IDC_CHECK_ANT4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,137,217,32,10
+    CONTROL         "",IDC_IPADDRESS_HOSTIP,"SysIPAddress32",WS_TABSTOP,239,
+                    269,86,15
+    EDITTEXT        IDC_EDIT_HOSTPORT,239,289,40,14,ES_AUTOHSCROLL
+    CONTROL         "DetectAlarm",IDC_CHECK_TESTALARM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,350,231,81,10
+    CONTROL         "Control Relay",IDC_CHECK_ENABLERELAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,337,380,65,10
+    EDITTEXT        IDC_EDIT_PERTIME,406,284,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LENOFLIST,406,262,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPORTINTERVAL,406,305,40,14,ES_AUTOHSCROLL
+    CONTROL         "Inform host whether",IDC_CHECK_REPORTOUTPUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,189,304,136,10
+    LTEXT           "BaudRate of RS232/RS485 Port:",IDC_STATIC_RS232485BPS,
+                    10,53,139,8
+    LTEXT           "Min Frequency of Carrier(MHz)",IDC_STATIC_MINFrequency,
+                    10,68,139,8
+    LTEXT           "Max Frequency of Carrier(MHz)",IDC_STATIC_MaxFrequency,
+                    10,84,139,8
+    LTEXT           "RF Power Output(0-63)",IDC_STATIC_RFPOWER,10,99,139,8
+    LTEXT           "Address of Reader (1-254)",IDC_STATIC_RS485PORTA,11,118,
+                    139,8
+    LTEXT           "Max Tags of once Reading(1-100)",
+                    IDC_STATIC_MAXTAGSREADING,10,135,139,8
+    GROUPBOX        "Parameters for Continuing and Trigger Mode",
+                    IDC_STATIC_AutoParameter,4,175,560,159,WS_GROUP
+    LTEXT           "Address of IP Reader",IDC_STATIC_ADDRESSIPREADER,245,84,
+                    91,8
+    LTEXT           "Mask of Reader",IDC_STATIC_READERMASK,245,120,66,8
+    LTEXT           "Gateway of Reader",IDC_STATIC_READERGateway,245,137,69,
+                    8
+    LTEXT           "MAC of Reader",IDC_STATIC_READERMAC,245,154,69,8
+    LTEXT           "Port of Reader",IDC_STATIC_ReaderPort,245,101,57,8
+    LTEXT           "Reserved",IDC_STATIC_Reserved,334,265,69,16
+    LTEXT           "ReserveTime(s)",IDC_STATIC_ReserveTime,333,284,71,16
+    LTEXT           "IntervalTime(s)",IDC_STATIC_IntervalTime,332,308,72,17
+    EDITTEXT        IDC_EDIT_FILTERLEN,276,364,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FILTERADD,276,344,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FILTERMASK,276,393,118,14,ES_AUTOHSCROLL
+    LTEXT           "Address of Tag EPC(bit):",IDC_STATIC_FilterAddr,183,346,
+                    86,15
+    LTEXT           "FilterLen",IDC_STATIC_FilterLen,183,368,86,15
+    LTEXT           "FilterMask",IDC_STATIC_FilterMask,183,395,92,8
+    LTEXT           "IP Address:",IDC_STATIC_HOSTIP,189,274,45,8
+    LTEXT           "Port:",IDC_STATIC_HostPort,189,292,47,8
+    LTEXT           "Pulse Width(*10us)",IDC_STATIC_WiegandWidth,17,245,89,8
+    LTEXT           "Pulse Interval(*10us)",IDC_STATIC_WiegandBetween,17,259,
+                    89,9
+    LTEXT           "Start Address of ID:",IDC_STATIC_IDStartAddr,454,182,
+                    107,15
+    PUSHBUTTON      "GetFilter",IDC_BUTTON_READFILTER,337,340,58,16
+    PUSHBUTTON      "SetFilter",IDC_BUTTON_SETFILTER,337,359,58,16
+    PUSHBUTTON      "Default Parameter",IDC_BUTTON_ACTIVEFACTORY,445,402,117,
+                    15
+    COMBOBOX        IDC_COMBO_READDUR,340,59,54,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Card read duration(ms)",IDC_STATIC_CARDREADDURATION,339,
+                    46,98,8
+    EDITTEXT        IDC_EDIT_READTIMES,151,151,45,14,ES_AUTOHSCROLL
+    LTEXT           "Command execution times",IDC_STATIC_CMDEXECTIMES,10,154,
+                    139,8
+    PUSHBUTTON      "GetRelayStat",IDC_BUTTON_GETRELAY,11,384,70,19
+    PUSHBUTTON      "SetRelayStat",IDC_BUTTON_SETRELAY,89,384,70,19
+    CONTROL         "Relay1",IDC_CHECK_RELAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,357,40,10
+    CONTROL         "Relay2",IDC_CHECK_RELAY1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,357,40,10
+    GROUPBOX        "Basic Parameter",IDC_STATIC_BASICWORDPRARM,4,40,560,132,
+                    WS_GROUP
+    LTEXT           "HardVersion:",IDC_STATIC_HardVer,224,7,49,8
+    LTEXT           "SoftVersion:",IDC_STATIC_SoftVer,224,24,49,8
+    EDITTEXT        IDC_EDIT_HardVer,274,3,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_SoftVer,274,21,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Work Mode",IDC_STATIC_WorkModeA,5,2,183,33
+    GROUPBOX        "Read from which Antenna",IDC_STATIC_ReadFromWhickAnt,10,
+                    207,163,25
+    GROUPBOX        "Wiegand Port Format",IDC_STATIC_WiegandPortF,10,234,163,
+                    40
+    GROUPBOX        "Port for Output",IDC_STATIC_PortAndFOutput,180,188,259,
+                    25
+    CONTROL         "RS232",IDC_RADIO1_RS232,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,195,198,36,10
+    CONTROL         "RS485",IDC_RADIO1_RS485,"Button",BS_AUTORADIOBUTTON,238,
+                    198,36,10
+    CONTROL         "RJ45",IDC_RADIO1_RJ45,"Button",BS_AUTORADIOBUTTON,280,
+                    198,32,10
+    CONTROL         "Wiegand26",IDC_RADIO1_Wiegand26,"Button",
+                    BS_AUTORADIOBUTTON,315,198,52,10
+    CONTROL         "Wiegand34",IDC_RADIO1_Wiegand34,"Button",
+                    BS_AUTORADIOBUTTON,367,198,53,10
+    GROUPBOX        "Format for Output",IDC_STATIC_PortofOutputA,180,220,136,
+                    37
+    CONTROL         "Simplified",IDC_RADIO2_Simplified,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,183,235,55,10
+    CONTROL         "Standard",IDC_RADIO2_Standard,"Button",
+                    BS_AUTORADIOBUTTON,246,235,55,10
+    GROUPBOX        "Trigger Mode",IDC_STATIC_TriggerModeA,10,277,130,24
+    CONTROL         "Low Level",IDC_RADIO3_LowLevel,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,286,50,10
+    CONTROL         "High Level",IDC_RADIO3_HightLevel,"Button",
+                    BS_AUTORADIOBUTTON,81,286,54,10
+    GROUPBOX        "What to be read from tag",IDC_STATIC_WhatBeReadTag,454,
+                    217,107,38
+    CONTROL         "ID of the Tag",IDC_RADIO4_IDofTAG,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,458,230,80,10
+    CONTROL         "SN Selected by User",IDC_RADIO4_SNSelByUser,"Button",
+                    BS_AUTORADIOBUTTON,459,243,89,10
+    GROUPBOX        "Timing Interval(ms)",IDC_STATIC_Timing,10,306,165,25
+    CONTROL         "10",IDC_RADIO6_10MS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,318,27,8
+    CONTROL         "20",IDC_RADIO6_20MS,"Button",BS_AUTORADIOBUTTON,43,318,
+                    27,8
+    CONTROL         "30",IDC_RADIO6_30MS,"Button",BS_AUTORADIOBUTTON,75,318,
+                    27,8
+    CONTROL         "50",IDC_RADIO6_50MS,"Button",BS_AUTORADIOBUTTON,107,318,
+                    29,8
+    CONTROL         "100",IDC_RADIO6_100MS,"Button",BS_AUTORADIOBUTTON,140,
+                    318,30,9
+    GROUPBOX        "Condion",IDC_STATIC_CondionA,454,258,107,73
+    CONTROL         "Notify Now",IDC_RADIO7_Immediately,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,464,267,65,10
+    CONTROL         "Timing Notify",IDC_RADIO7_Timingnotice,"Button",
+                    BS_AUTORADIOBUTTON,464,279,68,10
+    CONTROL         "Add",IDC_RADIO7_Addnewlabels,"Button",
+                    BS_AUTORADIOBUTTON,464,292,68,10
+    CONTROL         "Remove",IDC_RADIO7_Reducelabel,"Button",
+                    BS_AUTORADIOBUTTON,464,305,69,10
+    CONTROL         "Change",IDC_RADIO7_Changesinthenumberoflabels,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,464,317,69,11
+    GROUPBOX        "Set Relay",IDC_STATIC_SETRELAYA,5,335,169,77
+    GROUPBOX        "Set Filter",IDC_STATIC_SETFILTERA,180,335,225,77
+    GROUPBOX        "ISO",IDC_STATIC_ISO,463,45,98,47
+    CONTROL         "ISO18000-6B",IDC_RADIO1_6B,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,480,62,57,8
+    CONTROL         "ISO18000-6C",IDC_RADIO1_6C,"Button",BS_AUTORADIOBUTTON,
+                    480,77,57,8
+    GROUPBOX        "IP Paramters of Reader",IDC_STATIC_IPReaderParam,238,72,
+                    224,97
+    LTEXT           "Reader ID:",IDC_STATIC_READERID,323,7,41,8
+    EDITTEXT        IDC_EDIT_READERID,371,18,89,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "HostRelated",IDC_STATIC_HOSTRelated,180,259,149,58
+    GROUPBOX        "SetBuzzer",IDC_STATIC_SetBuzzer,238,46,80,22
+    GROUPBOX        "Alarm",IDC_STATIC_DetAlarmA,335,220,105,26
+    GROUPBOX        "Work Mode",IDC_STATIC_WORKMODEB,10,185,164,22
+    CONTROL         "Continuing",IDC_RADIOB_CONTINUING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,20,195,65,8
+    CONTROL         "Trigger",IDC_RADIOB_TRIGGER,"Button",BS_AUTORADIOBUTTON,
+                    85,195,65,8
+    CONTROL         "Auto",IDC_RADIOA_Auto,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,20,14,53,11
+    CONTROL         "Command",IDC_RADIOA_COMMANE,"Button",BS_AUTORADIOBUTTON,
+                    85,15,55,11
+    GROUPBOX        "TIME",IDC_STATIC_TIME,408,335,157,45
+    EDITTEXT        IDC_EDIT1_TIME,414,352,94,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Read Time",IDC_BUTTON1_READTIME,516,347,46,13
+    PUSHBUTTON      "Set Time",IDC_BUTTON1_SETTIME,516,363,46,13
+    LTEXT           "",IDC_STATIC_TIMEA,416,370,94,9
+    PUSHBUTTON      "开启自动工作",IDC_BUTTON_WORKAUTOSTART,465,133,95,15
+    PUSHBUTTON      "停止自动工作",IDC_BUTTON_WORKAUTOSTOP,465,152,95,15
+END
+
+IDD_PROPPAGE_OUTPUT DIALOG DISCARDABLE  0, 0, 586, 431
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Output"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_LIST_INFO,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,19,42,461,207
+    PUSHBUTTON      "Start",IDC_BUTTON_START,307,4,53,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,368,4,53,14,WS_DISABLED
+    PUSHBUTTON      "Start",IDC_BUTTON_WEG26START,246,385,51,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_WEG26STOP,308,385,51,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_WEG34STOP,308,409,51,14
+    COMBOBOX        IDC_COMBO_WEG26PROT,62,386,69,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_WEG34PORT,62,410,69,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Start",IDC_BUTTON_WEG34START,246,409,51,14
+    COMBOBOX        IDC_COMBO_WEG26RATE,156,386,62,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_WEG34RATE,156,410,62,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "A label is listed only once",IDC_CHECK_ONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,27,124,10
+    LTEXT           "Wiegand26",IDC_STATIC_Wgand26,21,390,37,8
+    LTEXT           "Wiegand34",IDC_STATIC_Wgand34,21,412,37,8
+    EDITTEXT        IDC_EDIT_Wiegand,19,260,463,115,ES_MULTILINE | 
+                    WS_VSCROLL
+    LTEXT           "Cmd Mode(RS232)--->Auto Mode(RS232)",IDC_STATIC_OUTMODE,
+                    22,3,185,10
+    COMBOBOX        IDC_COMBO_RS485O,223,3,62,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Clear Screen",IDC_BUTTON_CLEARSCREEN,427,4,53,14
+    CTEXT           "Total tags:",IDC_STATIC_ReadNumbers,490,9,75,11
+    CTEXT           "",IDC_STATIC_ReadNumValue,488,26,88,49
+    PUSHBUTTON      "Clear Memory",IDC_BUTTON_ClearMemory,307,21,53,14
+    PUSHBUTTON      "ReportNow",IDC_BUTTON_ReportNow,502,138,53,14
+    PUSHBUTTON      "Get Tag Info",IDC_BUTTON_GetTagInfo,368,21,53,14
+    CONTROL         "Whether to display the original records",
+                    IDC_CHECK1_OUTPUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,15,175,10
+    LTEXT           "",IDC_STATIC_ReadNumValueS,372,412,172,8
+END
+
+IDD_PROPPAGE_SMALLMODE DIALOG DISCARDABLE  0, 0, 543, 360
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "model"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_MODESMALL,265,25,260,298,ES_MULTILINE | 
+                    WS_VSCROLL
+    GROUPBOX        "数据格式",IDC_STATIC_MSDATAF,15,25,220,60
+    CONTROL         "十六进制",IDC_RADIO1_Hex16,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,30,50,50,20
+    CONTROL         "十进制",IDC_RADIO1_Hex10,"Button",BS_AUTORADIOBUTTON,
+                    115,50,50,20
+    CONTROL         "前缀",IDC_CHECK1_PERFIX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,96,55,16
+    LTEXT           "前缀值:",IDC_STATIC_PERFIXT,77,100,49,13
+    EDITTEXT        IDC_EDIT2_PERFIXVALUE,140,95,70,20,ES_AUTOHSCROLL
+    CONTROL         "带回车换行",IDC_CHECK1_LF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,123,55,20
+    GROUPBOX        "数据地址",IDC_STATIC_MSDATAB,20,155,220,42
+    LTEXT           "数据起始地址:",IDC_STATIC_MSDATAStart,30,173,55,10
+    EDITTEXT        IDC_EDIT2_MSDATAStart,94,171,31,14,ES_AUTOHSCROLL
+    LTEXT           "长度:",IDC_STATIC_MSDATALEN,134,174,55,10
+    EDITTEXT        IDC_EDIT2_MSDATALEN,198,172,31,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "更新参数",IDC_BUTTON1_MSUPDATE,132,215,87,18
+    PUSHBUTTON      "获取参数",IDC_BUTTON1_MSGET,39,215,87,18
+    PUSHBUTTON      "开始接收",IDC_BUTTON1_MSSTARTRECV,265,4,68,18
+    PUSHBUTTON      "停止接收",IDC_BUTTON1_MSSTOPRECV,338,4,68,18
+END
+
+IDD_DIALOG_PARAMETER DIALOG DISCARDABLE  0, 0, 580, 435
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "281Param"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "RS232",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,209,36,10
+    CONTROL         "RS485",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,59,209,36,
+                    10
+    CONTROL         "RJ45",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,101,209,
+                    32,10
+    CONTROL         "Wiegand26",IDC_RADIO19,"Button",BS_AUTORADIOBUTTON,139,
+                    209,52,10
+    CONTROL         "Wiegand34",IDC_RADIO20,"Button",BS_AUTORADIOBUTTON,191,
+                    209,52,10
+    GROUPBOX        "Work Mode",IDC_STATIC_workmode,196,44,87,25
+    GROUPBOX        "Basic Parameters",IDC_STATIC_basic_Param,7,7,435,100
+    LTEXT           "BaudRate of RS232/RS485 Port:",IDC_STATIC_baudrate,15,
+                    20,117,8
+    LTEXT           "RF Power Output(0dBm-33dBm):",IDC_STATIC_RFPOWER,15,65,
+                    113,8
+    LTEXT           "Min.Frequency of Carrier:",IDC_STATIC_minfreq,15,35,101,
+                    8
+    LTEXT           "Max.Frequency of Carrier:",IDC_STATIC_maxfreq,15,50,101,
+                    8
+    GROUPBOX        "IP Parameters for Reader ",IDC_STATIC_IPReader,7,256,
+                    160,129
+    GROUPBOX        "Working Antenna",IDC_STATIC_workantenna,10,120,135,25
+    LTEXT           "Max Tags of once Reading(1～100):",IDC_STATIC_MaxTags,
+                    16,79,133,8
+    GROUPBOX        "Type of Tag",IDC_STATIC_typeoftag,292,56,146,45
+    LTEXT           "Address of Reader(1-254):",IDC_STATIC_addrreader,47,93,
+                    101,8
+    LTEXT           "IP Address:",IDC_STATIC_ipaddressreader,13,274,44,8
+    LTEXT           "MAC:",IDC_STATIC_READERMAC,13,350,44,8
+    COMBOBOX        IDC_COMBO1,133,16,60,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,133,31,60,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,133,46,60,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,150,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,150,91,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,150,76,40,14,ES_AUTOHSCROLL
+    CONTROL         "Auto",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    201,55,32,10
+    CONTROL         "Command",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,234,55,
+                    44,10
+    CONTROL         "ISO18000-6B",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,297,69,55,10
+    CONTROL         "EPCC1",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,373,70,33,10
+    CONTROL         "ISO18000-6C",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,298,85,60,10
+    CONTROL         "ISO18000-6D",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,373,86,56,10
+    CONTROL         "ANT1",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,132,32,10
+    CONTROL         "ANT2",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,132,32,10
+    CONTROL         "ANT3",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    78,132,32,10
+    CONTROL         "ANT4",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    112,132,32,10
+    PUSHBUTTON      "Update Parameter",IDC_BUTTON1,447,21,89,20
+    LTEXT           "Mask:",IDC_STATIC_READERMASK,13,311,44,8
+    LTEXT           "Gateway:",IDC_STATIC_readergetway,13,332,44,8
+    LTEXT           "Port:",IDC_STATIC_ReaderPort,13,291,44,8
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    60,269,100,15
+    CONTROL         "IPAddress2",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,
+                    60,306,100,15
+    CONTROL         "IPAddress3",IDC_IPADDRESS3,"SysIPAddress32",WS_TABSTOP,
+                    60,325,100,15
+    EDITTEXT        IDC_EDIT4,60,288,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,59,345,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Network Parameter",IDC_BUTTON2,40,363,100,15
+    GROUPBOX        "AutoParameters",IDC_STATIC_autoparam,7,110,536,145
+    GROUPBOX        "Auto Mode",IDC_STATIC_automodee,10,146,135,25
+    CONTROL         "Continuing",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,25,157,59,10
+    CONTROL         "Trigger",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,89,157,
+                    40,10
+    LTEXT           "Storing Time(s):",IDC_STATIC_storetime,244,125,65,8
+    LTEXT           "Number of Tags:",IDC_STATIC_numberoftags,244,140,61,8
+    LTEXT           "Diapause of Reading:",IDC_STATIC_DiapauseofReader,244,
+                    170,81,8
+    GROUPBOX        "Format of Output",IDC_STATIC_formatoutput,10,172,135,25
+    GROUPBOX        "Port for Output",IDC_STATIC_portoutput,10,198,240,25
+    LTEXT           "Diapause of Report(s):",IDC_STATIC_DiapauseofReport,244,
+                    155,96,8
+    GROUPBOX        "Condition of Report",IDC_STATIC_confiReport,150,120,90,
+                    60
+    CONTROL         "Terse",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,183,34,10
+    CONTROL         "Standard",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,60,183,
+                    45,10
+    CONTROL         "XML",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_DISABLED,115,183,25,10
+    CONTROL         "Notify Now",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,155,130,57,8
+    CONTROL         "Timing Notify",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,
+                    155,140,68,10
+    CONTROL         "Add",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,155,152,28,
+                    10
+    CONTROL         "Remove",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,194,152,
+                    40,10
+    CONTROL         "Change",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,155,164,
+                    40,10
+    EDITTEXT        IDC_EDIT6,340,120,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,340,135,35,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,340,150,35,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO4,330,165,45,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Trigger Level",IDC_STATIC_triggerlevel,10,224,135,25
+    CONTROL         "Low",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    29,235,46,10
+    CONTROL         "High",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON,89,234,50,
+                    10
+    GROUPBOX        "ReportFilter",IDC_EPCC1G2_STATIC,171,256,364,47
+    LTEXT           "Address of Tag EPC (bit):",IDC_STATIC_ADDR,176,269,60,
+                    15
+    LTEXT           "Length of Tag EPC(bit):",IDC_STATIC_LEN,276,269,60,15
+    LTEXT           "Tag Data(HEX):",IDC_EPC_STATIC,176,289,57,8
+    EDITTEXT        IDC_EDIT9,241,269,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,336,269,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,241,286,150,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Factory Parameter",IDC_BUTTON3,448,56,88,20
+    LTEXT           "Hard Version:",IDC_STATIC_HardVer,200,19,53,8
+    LTEXT           "Soft Version:",IDC_STATIC_SoftVer,200,33,53,8
+    EDITTEXT        IDC_EDIT12,260,15,50,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT13,260,30,50,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Information",IDC_STATIC_information,170,306,240,79
+    EDITTEXT        IDC_EDIT14,362,14,66,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "SetReaderID",IDC_BUTTON5,450,42,70,14
+    PUSHBUTTON      "SetTime",IDC_BUTTON8,344,319,60,14
+    PUSHBUTTON      "GetTime",IDC_BUTTON9,344,339,60,14
+    PUSHBUTTON      "GetInputPin",IDC_BUTTON10,344,359,60,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LISTBOX         IDC_LIST1,175,315,163,65,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "SetRelay",IDC_STATIC_setRelay,417,308,122,53
+    CONTROL         "Relay1",IDC_CHECK25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,428,320,40,10
+    PUSHBUTTON      "Set Relay",IDC_BUTTON11,427,335,49,15,BS_MULTILINE
+    PUSHBUTTON      "Get Relay",IDC_BUTTON12,483,335,49,15,BS_MULTILINE
+    GROUPBOX        "IP Parameters for Host",IDC_STATIC_IPHost,381,116,155,
+                    62
+    LTEXT           "IP Address:",IDC_STATIC_Ipaddr,386,135,45,8
+    CONTROL         "IPAddress4",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,
+                    433,132,100,15
+    CONTROL         "Check Alarm",IDC_CHECK26,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,150,227,58,10
+    LTEXT           "Port:",IDC_STATIC_hostportt,409,160,21,8
+    EDITTEXT        IDC_EDIT20,435,155,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Stop Auto",IDC_BUTTON15,465,90,50,20
+    COMBOBOX        IDC_COMBO5,337,271,55,70,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enable Buzzer",IDC_CHECK27,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,206,75,64,10
+    LTEXT           "Reader ID:",IDC_STATIC_Readeridd,319,17,42,10
+    CONTROL         "RS485",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,206,92,36,10
+    CONTROL         "Relay2",IDC_CHECK18,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,483,320,40,10
+    PUSHBUTTON      "Set Filter",IDC_BUTTON4,406,266,61,14
+    PUSHBUTTON      "Get Filter",IDC_BUTTON6,406,283,61,14
+    CONTROL         "Ctrl Relay",IDC_CHECK19,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,475,277,56,10
+    GROUPBOX        "Wiegand Output",IDC_STATIC_wiegandoutput,282,184,254,64
+    EDITTEXT        IDC_EDIT15,346,201,40,14,ES_AUTOHSCROLL
+    LTEXT           "Pulse Width (*10us):",IDC_STATIC_pulsewidth,287,202,45,
+                    19
+    LTEXT           "Pulse Interval (*10us):",IDC_STATIC_pulseinterval,285,
+                    224,59,20
+    EDITTEXT        IDC_EDIT16,346,224,40,14,ES_AUTOHSCROLL
+    CONTROL         "ID of the Tag",IDC_RADIO21,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,394,216,68,10
+    CONTROL         "SN Selected by User",IDC_RADIO22,"Button",
+                    BS_AUTORADIOBUTTON,395,230,92,10
+    EDITTEXT        IDC_EDIT17,503,199,25,14,ES_AUTOHSCROLL
+    LTEXT           "Start Address of ID:",IDC_STATIC_startaddrid,395,202,
+                    104,8
+    CONTROL         "Report Output",IDC_CHECK20,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,176,187,68,10
+    PUSHBUTTON      "Get Moudle ver",IDC_BUTTONGetModule,468,380,70,14
+    LTEXT           "Module Version:",IDC_STATIC_GETMODULE,319,33,61,8
+    EDITTEXT        IDC_EDIT_ModuleVer,384,29,44,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Antenna sleep time:",IDC_STATIC_AntSleepTime,151,241,77,
+                    8
+    EDITTEXT        IDC_EDIT_AntSleepTime,239,238,31,14,ES_AUTOHSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 5,1,0,1
+ PRODUCTVERSION 5,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Reader626SDK by mqs\0"
+            VALUE "FileVersion", "V 5.1\0"
+            VALUE "InternalName", "ReaderDemo\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ReaderDemo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "\0"
+            VALUE "ProductVersion", "V5.1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_READERDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 655
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 526
+    END
+
+    IDD_PARAMETER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 476
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 384
+    END
+
+    IDD_EPCC1G2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 565
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 423
+    END
+
+    IDD_TK900_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 477
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 398
+    END
+
+    IDD_ISO6B_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 477
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 332
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 18
+    END
+
+    IDD_PROPPAGE_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 573
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 428
+    END
+
+    IDD_PROPPAGE_OUTPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 579
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 424
+    END
+
+    IDD_PROPPAGE_SMALLMODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 536
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 353
+    END
+
+    IDD_DIALOG_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 573
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 428
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PARAMETER_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO1, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO5, 0x403, 4, 0
+0x6d35, 0x0073, 
+    IDC_COMBO5, 0x403, 5, 0
+0x3031, 0x736d, "\000" 
+    IDC_COMBO5, 0x403, 5, 0
+0x3032, 0x736d, "\000" 
+    IDC_COMBO5, 0x403, 5, 0
+0x3033, 0x736d, "\000" 
+    IDC_COMBO5, 0x403, 5, 0
+0x3034, 0x736d, "\000" 
+    IDC_COMBO6, 0x403, 2, 0
+0x0030, 
+    IDC_COMBO6, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO6, 0x403, 2, 0
+0x0032, 
+    0
+END
+
+IDD_EPCC1G2_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO2, 0x403, 5, 0
+0x3031, 0x736d, "\000" 
+    IDC_COMBO2, 0x403, 5, 0
+0x3032, 0x736d, "\000" 
+    IDC_COMBO2, 0x403, 5, 0
+0x3033, 0x736d, "\000" 
+    IDC_COMBO2, 0x403, 5, 0
+0x3035, 0x736d, "\000" 
+    IDC_COMBO2, 0x403, 6, 0
+0x3031, 0x6d30, 0x0073, 
+    IDC_COMBO2, 0x403, 6, 0
+0x3032, 0x6d30, 0x0073, 
+    IDC_COMBO2, 0x403, 6, 0
+0x3035, 0x6d30, 0x0073, 
+    0
+END
+
+IDD_TK900_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 4, 0
+0x6d30, 0x0073, 
+    IDC_COMBO1, 0x403, 5, 0
+0x3031, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3032, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3033, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3035, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x3031, 0x6d30, 0x0073, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3032, 0x6d30, 0x0073, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3035, 0x6d30, 0x0073, 
+    0
+END
+
+IDD_ISO6B_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x3031, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3032, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3033, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x3035, 0x736d, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x3031, 0x6d30, 0x0073, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3032, 0x6d30, 0x0073, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3035, 0x6d30, 0x0073, 
+    0
+END
+
+IDD_DIALOG_PARAMETER DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO1, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO1, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO4, 0x403, 5, 0
+0x3031, 0x736d, "\000" 
+    IDC_COMBO4, 0x403, 5, 0
+0x3032, 0x736d, "\000" 
+    IDC_COMBO4, 0x403, 5, 0
+0x3033, 0x736d, "\000" 
+    IDC_COMBO4, 0x403, 5, 0
+0x3035, 0x736d, "\000" 
+    IDC_COMBO4, 0x403, 6, 0
+0x3031, 0x6d30, 0x0073, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// LANG_DATA
+//
+
+IDR_ENGLISH             LANG_DATA DISCARDABLE   "res\\R1100English.ini"
+IDR_CHINESE             LANG_DATA DISCARDABLE   "res\\R1100Chinese.ini"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于Reader1000SDK (&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_MEDIUM DIALOG DISCARDABLE  0, 0, 503, 395
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Connect Reader"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "ConnectReader",IDC_BUTTON1_ConnectReader,245,25,74,21
+    PUSHBUTTON      "DisconnectReader",IDC_BUTTON2_DisconnectReader,326,25,
+                    74,21
+    CONTROL         "IPAddress1",IDC_IPADDRESS1_IP,"SysIPAddress32",
+                    WS_TABSTOP,102,78,100,15
+    CONTROL         "IPAddress2",IDC_IPADDRESS2_HostIPADDR,"SysIPAddress32",
+                    WS_TABSTOP,102,127,100,15
+    EDITTEXT        IDC_EDIT1_ReaderPort,102,103,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2_HostPortA,102,152,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1_SerialPortA,85,203,66,126,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List3",IDC_LIST1_IPADDR,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,243,74,242,82
+    GROUPBOX        "Connect Mode",IDC_STATIC_CONNECTMODE,7,16,196,35
+    LTEXT           "Reader IP Address:",IDC_STATIC_ReaderIPADDR,15,81,73,8
+    LTEXT           "Reader Port:",IDC_STATIC_ReaderPort,15,106,49,8
+    LTEXT           "Host IP Address:",IDC_STATIC_HostIPADDR,15,131,65,8
+    LTEXT           "Host Port:",IDC_STATIC_HostPort,15,155,41,8
+    LTEXT           "Serial Port:",IDC_STATIC_SerialPortA,15,205,49,8
+    GROUPBOX        "TCP/IP",IDC_STATIC_TCPIPA,7,61,489,125
+    GROUPBOX        "RS232/RS485",IDC_STATIC_RS232A,7,190,243,39
+    CONTROL         "TCP/IP",IDC_RADIO1_TCPIP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,30,45,13
+    CONTROL         "RS232",IDC_RADIO2_RS232,"Button",BS_AUTORADIOBUTTON,71,
+                    30,45,13
+    CONTROL         "RS485",IDC_RADIO3_RS485,"Button",BS_AUTORADIOBUTTON,130,
+                    30,45,13
+    LTEXT           "485 Port:",IDC_STATIC_485Port,161,206,39,9,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT1_485PORT,201,203,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Scan",IDC_BUTTON1_ConnectScan,270,160,74,19
+    PUSHBUTTON      "Stop",IDC_BUTTON1_ScanStop,357,160,74,19
+    GROUPBOX        "Language",IDC_STATIC_LANGUAGE,7,239,243,39
+    GROUPBOX        "The number of antenna selection",
+                    IDC_STATIC_SelectAntNum,7,281,243,40
+    COMBOBOX        IDC_COMBO_SelectAntNum,19,297,105,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "English",IDC_RADIO_English,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,255,80,15
+    CONTROL         "Chinese",IDC_RADIO_Chinese,"Button",BS_AUTORADIOBUTTON,
+                    105,255,130,15
+END
+
+IDD_PROPPAGE_BPA9 DIALOG DISCARDABLE  0, 0, 537, 367
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "BPA9"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST_BPA9,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,136,20,390,138
+    CONTROL         "List ID of Tag",IDC_CHECK5_BPA9,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,8,68,70,17
+    GROUPBOX        "Read Interval",IDC_STATIC_RInterval_BPA9,7,23,123,34
+    COMBOBOX        IDC_COMBO_BPA9,20,36,70,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "CMD1",IDC_BUTTON1_CMD1,7,132,50,19
+    PUSHBUTTON      "CMD2",IDC_BUTTON1_CMD2,60,132,50,19
+    GROUPBOX        "Opt",IDC_STATIC_BPA9Opt,5,92,126,36
+    CONTROL         "Granted",IDC_RADIOA_BPA9Granted,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,16,105,53,12
+    CONTROL         "Denied",IDC_RADIOA_BPA9Denied,"Button",
+                    BS_AUTORADIOBUTTON,74,105,48,12
+    EDITTEXT        IDC_EDIT_BPA9Cmdd,8,169,523,171,ES_MULTILINE | 
+                    WS_VSCROLL
+    LTEXT           "",IDC_STATIC_BPATIME,8,345,170,15
+END
+
+IDD_PROPPAGE_rubbish DIALOG DISCARDABLE  0, 0, 540, 367
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "rubbish"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC_RU_READID,15,25,200,105
+    EDITTEXT        IDC_EDIT_RUID,98,7,20,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set ID",IDC_BUTTON_SETRUID,145,40,60,16
+    PUSHBUTTON      "Get ID",IDC_BUTTON_GETRUID,145,65,60,16
+    PUSHBUTTON      "Set Record",IDC_BUTTON_SETRURECORD,20,150,80,20
+    PUSHBUTTON      "Get All Record",IDC_BUTTON_GETRUALLRECORD,115,150,80,20
+    PUSHBUTTON      "init card",IDC_BUTTON_DELRURECORD,15,5,72,18
+    EDITTEXT        IDC_EDIT_RECORD,230,25,265,145,ES_MULTILINE | WS_VSCROLL
+    GROUPBOX        "Source",IDC_STATIC_SOURCE,27,36,115,28
+    CONTROL         "1#",IDC_RADIO0_RU1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,33,48,20,12
+    CONTROL         "2#",IDC_RADIO0_RU2,"Button",BS_AUTORADIOBUTTON,55,48,20,
+                    12
+    CONTROL         "3#",IDC_RADIO0_RU3,"Button",BS_AUTORADIOBUTTON,77,48,20,
+                    12
+    CONTROL         "4#",IDC_RADIO0_RU4,"Button",BS_AUTORADIOBUTTON,97,48,20,
+                    12
+    CONTROL         "5#",IDC_RADIO0_RU5,"Button",BS_AUTORADIOBUTTON,118,48,
+                    20,12
+    GROUPBOX        "Dest",IDC_STATIC_Dest,28,73,115,26
+    CONTROL         "6#",IDC_RADIO2_RU6,"Button",BS_AUTORADIOBUTTON,34,84,24,
+                    10
+    CONTROL         "7#",IDC_RADIO2_RU7,"Button",BS_AUTORADIOBUTTON,71,84,21,
+                    11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROPPAGE_MEDIUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 496
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 388
+    END
+
+    IDD_PROPPAGE_BPA9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 530
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 360
+    END
+
+    IDD_PROPPAGE_rubbish, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 533
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 360
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ReaderDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

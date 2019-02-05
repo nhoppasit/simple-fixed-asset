@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\AndroidStudioSimple\demo-uhf_example2\libs\xUtils-2.5.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7b27a19b6f7ed3d26d9157147545c94ea8ee535">
+        <dex dex="E:\AndroidStudioSimple\demo-uhf_example2\build\intermediates\pre-dexed\debug\xUtils-2.5.5_2d1f1ba37eccad9ccb11e119860ed6a2c961dc3f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\AndroidStudioSimple\demo-uhf_example2\libs\cw-deviceapi20180628.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0066ede4e43018116033b6a3e0f420828c460f60">
+        <dex dex="E:\AndroidStudioSimple\demo-uhf_example2\build\intermediates\pre-dexed\debug\cw-deviceapi20180628_a0ffcdb0ebd328ebc53120af3baab608bddd586a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\android\adt-bundle-android_studio\android-sdk_r24.4.1-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="E:\AndroidStudioSimple\demo-uhf_example2\build\intermediates\pre-dexed\debug\support-v4-18.0.0_50b2f182b50be420dbe10a4f7233b47c81eba377.jar" />
+    </item>
+
+</items>
